@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(this);
+        console.log(window);
+        console.log(this === window);
+
+        // add mobile iphone in Employee function itself, Facebook API
+        function Employee(id, name) {
+            this.id = id;
+            this.name = name;
+        }
+
+        let hardika = new Employee(101, "Hardika");
+        let ameera = new Employee(102, "Ameera");
+
+        let mahalakshmi = new Employee(103, "Mahalakshmi");
+        let nabham = new Employee(104, "Nabham");
+
+        let praveen = new Employee(105, "Praveen");
+        let rahul = new Employee(106, "Rahul");
+
+        hardika.mobile = "iPhone";
+        ameera.mobile = "iPhone";
+        mahalakshmi.mobile = "iPhone";
+        nabham.mobile = "iPhone";
+
+        // Inheritance
+        // Object.prototoype.name = value
+        Employee.prototype.laptop = "Macbook"; // Added property
+
+        console.log(hardika);
+        console.log(ameera);
+        console.log(mahalakshmi);
+        console.log(nabham);
+
+        console.log(praveen);
+        console.log(rahul);
+
+        document.write("Rahul is having " + rahul.laptop + " laptop");
+
+    </script>
+</body>
+
+</html>
